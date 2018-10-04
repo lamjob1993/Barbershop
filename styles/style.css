@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* свойства ненаследуемые, отступы сбросятся только у тега <body> */
+  /* контроль умолчаний - у тега <body> могут быть отступы по умолчанию,
+  лучше их обнулить, в предыдущих версиях normalize это было,
+  сейчас этого нет, по умолчанию лучше писать эти параметры */
+
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  /*выбор семейства шрифта, если внешний шрифт "PT"
+  по какой-то причине не загрузится, то используется встроенный "Arial" - это
+  необходимое умолчание, если не загрузится Arial, то правило сообщит,
+  что должен использоваться шрифт Sans Serif - без засечек*/
+  font-size: 14px; /*размер шрифта*/
+  line-height: 24px; /*высота строки*/
+  font-weight: 700; /*жирность шрифта*/
+  color: #ffffff; /*цвет шрифта*/
+  text-transform: uppercase; /*все символы текста становятся прописными (верхний регистр)*/
+
+  background-color: #000000;
+  background-image: url("../images/background.jpg");
+  background-position: top center; /*задает начальное положение фонового изображения*/
+  background-repeat: no-repeat; /*определяет, как будет повторяться фоновое изображение*/
+}
+
+/* Хорошей практикой считается, что в одном CSS правиле
+должны находиться background-color и color*/
+
+a {
+  text-decoration: none; /*убирает подчеркивания у ссылок*/
+}
+
+/* Глобальные текстовые параметры - тот вид текста, которого
+больше всего - два глобальных CSS правила для <a> и <body> */
+
+.button {
+  font: inherit; /*inherit - все параметры шрифта принудительно взять от родителя, то есть от <body>*/
+  
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #000000;
+  border: none;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: #663d15;
+}
+
+.main-navigation {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+
+  background-color: #000000;
+}
+
+.site-navigation a,
+.user-navigation a {
+  color: #ffffff;
+}
+
+.site-navigation a:hover, /*состояние объекта при наведении указателя*/
+.site-navigation a:focus, /*состояние объекта, который в фокусе*/
+.user-navigation a:hover,
+.user-navigation a:focus {
+  background-color: #242424;
+}
+
+.features-list {
+  list-style: none; /*убирает маркеры у списка*/
+}
+
+.feature-item {
+  text-align: center; /*выравнивает текст по центру*/
+}
+
+.feature-item h3 {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.index-columns {
+  color: #000000;
+
+  background-color: #f8f5f2;
+  background-image: url(../images/pattern-light.jpg);
+  /*текстуру всегда нужно дополнять цветом фона,
+  на случай, если она не загрузится*/
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.index-columns h2 {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.news-list {
+  list-style: none;
+}
+
+.news-item time {
+  text-transform: none; 
+  /*Управляет преобразованием текста элемента в заглавные
+  или прописные символы. Когда значение отлично от none,
+  регистр исходного текста будет изменен. (до применения этого правила
+  для всего документа действовало правило с прописным регистром)*/
+}
+
+.gallery-content {
+  background-color: #cccccc;
+  border: 7px solid #ffffff; /*solid задает цвет рамки border*/
+}
+
+.appointment-item input {
+  font: inherit; 
+
+  background-color: transparent; /*устанавливает прозрачный фон*/
+  border: 2px solid #000000;
+}
+
+.appointment-item input:focus,
+.appointment-item input:hover {
+  border-color: #663d15;
+}
+
+.main-footer {
+  color: #ffffff;
+
+  background-color: #212121; 
+  background-image: url(../images/bkg-footer.jpg);
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.footer-contacts a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+  text-decoration: none;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.social-button {
+  color: #ffffff;
+} 
